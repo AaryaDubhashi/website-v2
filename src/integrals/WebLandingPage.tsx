@@ -7,6 +7,8 @@ import { WebAppBarLink } from "../components/WebAppBar/interfaces";
 import LandingProjectCard from "../components/LandingProjectCard";
 import MemberCarousel from "../components/MemberCarousel";
 import Stats from "../components/Stats";
+import Sponsors from "../components/Sponsors";
+import SponsorTierTitles from "../components/SponsorTierTitles";
 
 export default function WebLandingPage() {
   const projectsContainer = React.useRef<HTMLDivElement>();
@@ -150,8 +152,36 @@ export default function WebLandingPage() {
           }}
         />
       </Box>
-      <Box sx={{ height: "700px" }}></Box>
+      <Box sx={{ height: "300px" }}></Box>
       <MemberCarousel/>
+      <Box sx={{ height: "400px" }}></Box>
+      <SponsorTierTitles title={{text:"Meet Our Sponsors"}}/>
+      <Box sx={{ height: "300px" }}></Box>
+      <SponsorTierTitles title={{text:"Platinum"}}/>
+      <Sponsors project={{
+        tier:"platinum",
+        members:[],
+        logos:""
+      }}
+      />
+      <Box sx={{ height: "300px" }}></Box>
+      <SponsorTierTitles title={{text:"Gold"}}/>
+      <Sponsors project={{
+        tier:"gold",
+        members:[],
+        logos:""
+        
+      }}/>
+      <Box sx={{ height: "300px" }}></Box>
+      <SponsorTierTitles title={{text:"Bronze"}}/>
+      <Sponsors project={{
+        tier:"bronze",
+        members:[],
+        logos:""
+        
+      }}/>
+      <Box sx={{ height: "100px" }}></Box>
+      
       
       
 
